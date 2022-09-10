@@ -1,0 +1,132 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.weather {
+  border: 2px solid #dadde1;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: block;
+  max-width: 601px;
+  max-height: 752px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px rgb(206, 203, 203);
+  background-image: url(image/image.cloud.jpg);
+}
+
+.city {
+  border: 1px solid #dadde1;
+  margin: 0 0 20px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  background-color: #f5e9f7;
+  border-color: #ab47bb;
+}
+.block-2 {
+  width: 569px;
+}
+.col {
+  padding: 0px;
+  border: 1px solid #c2c0db;
+  margin: 7px;
+  border-radius: 10px;
+  background-color: #c2c0db;
+  font-weight: normal;
+}
+
+.search {
+  background-color: #f5e9f7;
+  border-color: #ab47bb;
+}
+.current {
+  width: 120px;
+  background-color: #ab47bb;
+  border: #ab47bb;
+  padding: 5px 20px;
+  color: black;
+  font-weight: bold;
+}
+.col:hover {
+  cursor: pointer;
+}
+.current:hover,
+.search:hover {
+  background-color: #672eed;
+}
+
+h1,
+.time,
+.dayOfYear,
+.dayOfWeek,
+.max-temperature,
+.day,
+.time {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.last,
+.humidity,
+.overcast,
+.wind,
+.min-temperature,
+.block-2,
+.search {
+  color: #1f2b4e;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 50px;
+}
+.units {
+  font-weight: bold;
+}
+.last {
+  line-height: 0;
+}
+.day,
+.time {
+  font-size: 20px;
+}
+.humidity {
+  padding-top: 6px;
+}
+.big-degree {
+  font-size: 75px;
+  color: rgb(33, 33, 33);
+  font-weight: bold;
+  line-height: 1;
+}
+.wind {
+  padding-top: 40px;
+}
+.overcast {
+  padding-top: 23px;
+}
+.card {
+  background-color: #faf6fc;
+  text-align: center;
+  border: 2px solid #f5e9f7;
+}
+.dayOfYear {
+  font-weight: bold;
+  font-size: 23px;
+  color: #ab47bb;
+}
+.dayOfWeek,
+.max-temperature {
+  color: black;
+  font-weight: bold;
+}
+.max-temperature {
+  font-size: 17px;
+}
+.min-temperature {
+  line-height: 0;
+}
