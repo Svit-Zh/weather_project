@@ -11,7 +11,15 @@ body {
   max-height: 752px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 2px rgb(206, 203, 203);
-  background-image: url(image/image.cloud.jpg);
+}
+img.bg {
+  min-width: 601px;
+  width: 100%;
+  height: 752px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .city {
@@ -48,7 +56,8 @@ body {
   color: black;
   font-weight: bold;
 }
-.col:hover {
+.col:hover,
+small {
   cursor: pointer;
 }
 .current:hover,
