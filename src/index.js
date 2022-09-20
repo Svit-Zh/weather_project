@@ -85,6 +85,7 @@ function chooseBerlin(event) {
 }
 
 function showTemperature(response) {
+  let iconElement = document.querySelector("#icon");
   celsiusTemperature = response.data.main.temp;
 
   document.querySelector("#city1").innerHTML = response.data.name;
@@ -102,6 +103,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchLocation(position) {
   let apiKey = "ab6174be7b717732ef179b1d3f3555cf";
