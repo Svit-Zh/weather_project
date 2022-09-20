@@ -13,7 +13,7 @@ function formatDate(date) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
   let month = months[currentMonth];
   let year = date.getFullYear();
@@ -39,7 +39,7 @@ function formatHours(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[dayIndex];
 
