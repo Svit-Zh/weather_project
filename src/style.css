@@ -26,6 +26,12 @@ body {
   background-color: #f5e9f7;
   border-color: #ab47bb;
 }
+.city .active {
+  cursor: pointer;
+}
+.city .active:hover {
+  text-decoration: none;
+}
 .block-2 {
   width: 569px;
 }
@@ -75,7 +81,8 @@ h1,
 .wind,
 .min-temperature,
 .block-2,
-.search {
+.search,
+.active {
   color: #1f2b4e;
   font-weight: bold;
 }
