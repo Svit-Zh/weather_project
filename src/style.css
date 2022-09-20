@@ -1,14 +1,16 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.weather-wrapper {
+  max-width: 601px;
+  max-height: 772px;
+  margin: 20px auto;
+}
 .weather {
   border: 2px solid #dadde1;
   padding: 20px;
-  margin: 20px auto;
   border-radius: 10px;
   display: block;
-  max-width: 601px;
-  max-height: 752px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 2px rgb(206, 203, 203);
   background-image: url("../image/image.cloud.jpg");
