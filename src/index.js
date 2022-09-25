@@ -55,7 +55,7 @@ function displayForcast() {
     forcastHTML =
       forecastHTML +
       ` 
-              <div class="col-2">
+              <div class="col-sm">
                   <div class="dayOfWeek">${day}</div>
                    <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42">
                   <div class="card-body">
