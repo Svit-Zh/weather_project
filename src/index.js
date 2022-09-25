@@ -46,6 +46,34 @@ function formatHours(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForcast() {
+  let forcastElement = document.querySelector("forecast");
+  let forecastHTML = `<div class="row">`;
+  let now;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forcastHTML =
+      forecastHTML +
+      ` 
+              <div class="col-2">
+                  <div class="dayOfWeek">${day}</div>
+                   <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42">
+                  <div class="card-body">
+                    <br />
+                    <span class="max-temperature" id="max-temperature"
+                      >26°
+                    </span>
+
+                    <span class="min-temperature" id="min-temperature"
+                      >17°</span
+                    >
+                  </div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forcastElement.innerHTML = forecastHTML;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input").value;
@@ -166,3 +194,4 @@ let berlinButton = document.querySelector("#berlin-button");
 berlinButton.addEventListener("click", chooseBerlin);
 
 searchCity("Kyiv");
+displayForcast();

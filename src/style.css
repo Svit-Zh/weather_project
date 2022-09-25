@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #ececf4;
+  background-color: #f8f7f9;
 }
 .weather-wrapper {
   max-width: 601px;
@@ -68,7 +68,6 @@ small {
 
 h1,
 .time,
-.dayOfYear,
 .dayOfWeek,
 .max-temperature,
 .day,
@@ -122,24 +121,23 @@ h1 {
   padding-top: 23px;
   text-transform: capitalize;
 }
-.card {
+.col-2 {
   background-color: #faf6fc;
   text-align: center;
   border: 2px solid #f5e9f7;
+  margin-top: 20px;
 }
-.dayOfYear {
-  font-weight: bold;
-  font-size: 23px;
-  color: #ab47bb;
-}
+
 .dayOfWeek,
 .max-temperature {
   color: black;
   font-weight: bold;
+  opacity: 0, 5;
 }
 .max-temperature {
   font-size: 17px;
 }
 .min-temperature {
   line-height: 0;
+  opacity: 0, 5;
 }
