@@ -1,5 +1,5 @@
-function formatDate(date) {
-  let now = date.getDate();
+function formatDate(timestamp) {
+  let now = date.getDate(timestamp);
   let currentMonth = date.getMonth();
   let months = [
     "January",
@@ -45,7 +45,7 @@ function formatHours(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
-function formatDay(date) {
+function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -53,14 +53,16 @@ function formatDay(date) {
 }
 
 function displayForcast(response) {
+  let forecast = response.data.daily;
   let forcastElement = document.querySelector("#forecast");
-  forecastHTML.innerHTML = null;
-  let forecast = null;
+  let forecastHTML = `<div class="col-sm">`;
 
-  for (let index = 0; index < 6; index++) {
-    forecast = response.data.list[index];
-    forecastElement.innerHTML += ` <div class="row">
-              <div class="col-sm">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="row">
+              
                   <div class="dayOfWeek">${formatDay(forecastDay.dt)}</div>
                    <img src="http://openweathermap.org/img/wn/${
                      forecastDay.weather[0].icon
@@ -75,8 +77,12 @@ function displayForcast(response) {
                       >${Math.round(forecastDay.temp.min)}°</span>
                   </div>
               </div>
-              </div>`;
-  }
+              `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function handleSubmit(event) {
