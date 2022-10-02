@@ -53,14 +53,13 @@ function formatDay(date) {
 }
 
 function displayForcast(response) {
-  let forecast = response.data.daily;
   let forcastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
-      forcastHTML =
-        forecastHTML +
-        ` 
+  forecastHTML.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` <div class="row">
               <div class="col-sm">
                   <div class="dayOfWeek">${formatDay(forecastDay.dt)}</div>
                    <img src="http://openweathermap.org/img/wn/${
@@ -75,12 +74,9 @@ function displayForcast(response) {
                     <span class="min-temperature" id="min-temperature"
                       >${Math.round(forecastDay.temp.min)}°</span>
                   </div>
+              </div>
               </div>`;
-    }
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forcastElement.innerHTML = forecastHTML;
-  forecastTemp = forecast;
+  }
 }
 
 function handleSubmit(event) {
