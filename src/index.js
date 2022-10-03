@@ -17,9 +17,8 @@ function formatDate(timestamp) {
     "December",
   ];
   let month = months[currentMonth];
-  let year = date.getFullYear(timestamp);
 
-  return `${month}, ${now}, ${year}`;
+  return `${month}, ${now}`;
 }
 
 function formatHours(date) {
