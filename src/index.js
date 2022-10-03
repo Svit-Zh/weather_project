@@ -1,4 +1,5 @@
 function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
   let now = date.getDate(timestamp);
   let currentMonth = date.getMonth();
   let months = [
@@ -83,6 +84,28 @@ function displayForcast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+
+  let forecastIcon = document.querySelectorAll(".forecast-icon");
+  forecast.forEach((el, index) => {
+    if (index < 6) {
+      let forecastDescription = el.weather[0].description;
+      if (forecastDescription === "clear sky") {
+        forecastIcon[index].innerHTML = '<i class="bi bi-sun"></i>';
+      }
+      if (forecastDescription === "overcast clouds") {
+        forecastIcon[index].innerHTML = '<i class="bi bi-clouds"></i>';
+      }
+      if (forecastDescription === "moderate rain") {
+        forecastIcon[index].innerHTML =
+          '<i class="bi bi-cloud-rain-heavy"></i>';
+      }
+    }
+  });
+}
+function getForecast(coordinates) {
+  let apiKey = "ab6174be7b717732ef179b1d3f3555cf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -121,11 +144,6 @@ function chooseMadrid(event) {
 function chooseBerlin(event) {
   event.preventDefault();
   searchCity("Berlin");
-}
-function getForecast(coordinates) {
-  let apiKey = "ab6174be7b717732ef179b1d3f3555cf";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemperature(response) {
