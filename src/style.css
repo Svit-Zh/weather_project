@@ -118,7 +118,7 @@ h1 {
   padding-top: 40px;
 }
 .overcast {
-  padding-top: 20px;
+  padding-top: 40px;
   text-transform: capitalize;
 }
 .forecast1 {
@@ -126,6 +126,7 @@ h1 {
   text-align: center;
   border: 2px solid #ab47bb;
   margin-top: 20px;
+  padding-top: 40px;
 }
 
 .dayOfWeek,
