@@ -1,5 +1,5 @@
 function formatDate(timestamp) {
-  let date = new Date(timestamp * 1000);
+  let date = timestamp;
   let now = date.getDate(timestamp);
   let currentMonth = date.getMonth();
   let months = [
