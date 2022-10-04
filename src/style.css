@@ -106,7 +106,7 @@ h1 {
 }
 
 .humidity {
-  padding-top: 6px;
+  padding-top: 21px;
 }
 .big-degree {
   font-size: 75px;
@@ -115,10 +115,10 @@ h1 {
   line-height: 1;
 }
 .wind {
-  padding-top: 40px;
+  padding-top: 55px;
 }
 .overcast {
-  padding-top: 30px;
+  padding-top: 40px;
   text-transform: capitalize;
 }
 .forecast1 {
